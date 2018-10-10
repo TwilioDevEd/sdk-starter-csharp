@@ -1,0 +1,10 @@
+FROM microsoft/dotnet:2.1-sdk
+
+WORKDIR /src
+
+COPY src/ src
+COPY test/ test
+
+WORKDIR /src/src
+
+RUN dotnet restore && dotnet test ../test/sdk-starter-dotnet-core-test.csproj
