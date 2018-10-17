@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Twilio Video - Video Quickstart";
+}
+@section Styles{
+    <link href="~/css/video.css" rel="stylesheet" />
+}
+<a class="btn btn-lg btn-success" asp-controller="Home" asp-action="Index">Back</a>
+    <div id="remote-media"></div>
+    <div id="controls">
+        <div id="preview">
+            <p class="instructions">Hello Beautiful</p>
+            <div id="local-media"></div>
+            <button id="button-preview">Preview My Camera</button>
+        </div>
+
+        <div id="room-controls">
+            <p class="instructions">Room Name:</p>
+            <input id="room-name" type="text" placeholder="Enter a room name" />
+            <button id="button-join">Join Room</button>
+            <button id="button-leave">Leave Room</button>
+        </div>
+
+        <div id="log"></div>
+    </div>
+
+@section Scripts
+{
+    <script src="//media.twiliocdn.com/sdk/js/common/v0.1/twilio-common.min.js"></script>
+    <script src="//media.twiliocdn.com/sdk/js/video/releases/1.14.0/twilio-video.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="~/js/video.js"></script>
+}
+

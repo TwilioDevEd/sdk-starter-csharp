@@ -20,18 +20,8 @@ Let's get started!
 ## Configure the sample application
 
 To run the application, you'll need to gather your Twilio account credentials and configure them
-in a file named `appsettings.json` in the `src/sdkstarter` directory. To create this file from an example template, do the following in your Terminal.
-
-**Windows**
-```powershell
-cd src\sdkstarter
-copy .\appsettings.example.json .\appsettings.json
-```
-
-**OS X or Linux**
-```bash
-cp appsettings.example.json appsettings.json
-```
+in User Secrets via the `secrets.json` file.   If you are unsure how to do this, check out this blog post on (User Secrets)[https://www.twilio.com/blog/2018/05/user-secrets-in-a-net-core-web-app.html].
+These credentials should mirror those in the `appsettings.json` file found in the root of the `TwilioSdkStarterDotnetCore.Web` project.
 
 ### Configure account information
 
@@ -39,14 +29,14 @@ Every sample in the demo requires some basic credentials from your Twilio accoun
 
 | Config Value  | Description |
 | :-------------  |:------------- |
-`TWILIO_ACCOUNT_SID` | Your primary Twilio account identifier - find this [in the console here](https://www.twilio.com/console).
-`TWILIO_API_KEY` | Used to authenticate - [generate one here](https://www.twilio.com/console/dev-tools/api-keys).
-`TWILIO_API_SECRET` | Used to authenticate - [just like the above, you'll get one here](https://www.twilio.com/console/dev-tools/api-keys).
+`TwilioAccountSid` | Your primary Twilio account identifier - find this [in the console here](https://www.twilio.com/console).
+`TwilioApiKey` | Used to authenticate - [generate one here](https://www.twilio.com/console/dev-tools/api-keys).
+`TwilioApiSecret` | Used to authenticate - [just like the above, you'll get one here](https://www.twilio.com/console/dev-tools/api-keys).
 
 #### A Note on API Keys
 
 When you generate an API key pair at the URLs above, your API Secret will only be shown once -
-make sure to save this information in a secure location, or possibly your `~/.bash_profile`.
+make sure to save this information in a secure location.
 
 ### Configure product-specific settings
 
@@ -63,7 +53,7 @@ In addition to the above, you'll need to [generate a Chat Service](https://www.t
 
 | Config Value  | Where to get one. |
 | :------------- |:------------- |
-`TWILIO_CHAT_SERVICE_SID` | Chat | [Generate one in the Twilio Chat console](https://www.twilio.com/console/chat/services)
+`TwilioChatServiceSid` | Chat | [Generate one in the Twilio Chat console](https://www.twilio.com/console/chat/services)
 
 ### Configuring Twilio Notify
 
@@ -71,27 +61,26 @@ You will need to create a Notify Service and add at least one credential on the 
 
 | Config Value   | Where to get one. |
 | :------------- |:------------- |
-`TWILIO_NOTIFICATION_SERVICE_SID` | Generate one in the [Notify Console](https://www.twilio.com/console/notify/services) and put this in your `appsettings.json` file.
+`TwilioNotificationServiceSid` | Generate one in the [Notify Console](https://www.twilio.com/console/notify/services) and put this in your `appsettings.json` file.
 A Push Credential | Generate one with Apple or Google and [configure it as a Notify credential](https://www.twilio.com/console/notify/credentials).
 
-Once you've done that, run the application and [open a browser](localhost:3000/notify)!
+Once you've done that, run the application and [open a browser](localhost:50768/notify)!
 
 ## Run The Application
 
 ### Visual Studio
 
-Open `sdkstarter.sln` and press *F5* or click the Run button
+Open `TwilioSdkStarterDotnetCore.sln` and press *F5* or click the Run button
 
 ### Windows CLI, OS X or Linux
 
 ```bash
-cd src/sdkstarter
+cd src/TwilioSdkStarterDotnetCore
 dotnet restore
 dotnet run
 ```
 
-Your application should now be running at [http://localhost:3000/](http://localhost:3000/). (If you are running from Visual Studio, a
-random port number may be selected as opposed to 3000.)
+Your application should now be running at [http://localhost:50768/](http://localhost:50768/).
 
 ![Home Screen](https://cloud.githubusercontent.com/assets/809856/23171215/8107bd9e-f817-11e6-94c5-2b132d798fae.png)
 
@@ -102,13 +91,13 @@ Check your config values, and follow the links to the demo applications!
 If you are going to connect to this SDK Starter Kit with a mobile app (and you should try it out!), your phone won't be able to access localhost directly. You'll need to create a publicly accessible URL using a tool like [ngrok](https://ngrok.com/) to send HTTP/HTTPS traffic to a server running on your localhost. Use HTTPS to make web connections that retrieve a Twilio access token.
 
 ```bash
-ngrok http 3000
+ngrok http 50768
 ```
 
 ## Run Tests
 
 ```bash
-dotnet test sdkstarter.Test/sdkstarter.Test.csproj
+dotnet test tests/TwilioSdkStarterDotnetCore.Tests/TwilioSdkStarterDotnetCore.Tests.csproj
 ```
 ## License
 MIT

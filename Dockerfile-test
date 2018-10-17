@@ -3,8 +3,8 @@ FROM microsoft/dotnet:2.1-sdk
 WORKDIR /src
 
 COPY src/ src
-COPY test/ test
+COPY tests/ tests
 
-WORKDIR /src/src
+WORKDIR /src/src/TwilioSdkStarterDotnetCore.Web
 
-RUN dotnet restore && dotnet test ../test/sdk-starter-dotnet-core-test.csproj
+RUN dotnet restore && dotnet test ../../tests/TwilioSdkStarterDotnetCore.Tests/TwilioSdkStarterDotnetCore.Tests.csproj

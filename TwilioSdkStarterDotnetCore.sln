@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{927F0DE5-9163-468A-AC36-9D4D11035776}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{335EDF36-138D-4FA0-A0A7-2BCF946DC438}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwilioSdkStarterDotnetCore.Web", "src\TwilioSdkStarterDotnetCore.Web\TwilioSdkStarterDotnetCore.Web.csproj", "{79A347A8-313A-4D83-8C0C-7FE1CBA0AA67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9317EA5E-8603-4F08-A7ED-3EE87A94534D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwilioSdkStarterDotnetCore.Tests", "tests\TwilioSdkStarterDotnetCore.Tests\TwilioSdkStarterDotnetCore.Tests.csproj", "{EA1B08D7-0EE1-44F6-A1C6-745FADFF9AA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79A347A8-313A-4D83-8C0C-7FE1CBA0AA67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79A347A8-313A-4D83-8C0C-7FE1CBA0AA67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79A347A8-313A-4D83-8C0C-7FE1CBA0AA67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79A347A8-313A-4D83-8C0C-7FE1CBA0AA67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA1B08D7-0EE1-44F6-A1C6-745FADFF9AA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA1B08D7-0EE1-44F6-A1C6-745FADFF9AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA1B08D7-0EE1-44F6-A1C6-745FADFF9AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA1B08D7-0EE1-44F6-A1C6-745FADFF9AA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{79A347A8-313A-4D83-8C0C-7FE1CBA0AA67} = {927F0DE5-9163-468A-AC36-9D4D11035776}
+		{EA1B08D7-0EE1-44F6-A1C6-745FADFF9AA3} = {335EDF36-138D-4FA0-A0A7-2BCF946DC438}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02136022-3040-4D82-A5EA-EEC2D5A71D1A}
+	EndGlobalSection
+EndGlobal

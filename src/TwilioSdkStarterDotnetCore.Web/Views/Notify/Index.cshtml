@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Notify Quickstart";
+}
+@section Styles
+    {
+    <link rel="shortcut icon" href="//www.twilio.com/marketing/bundles/marketing/img/favicons/favicon.ico">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="~/css/notify.css" rel="stylesheet" />
+}
+
+    <header>
+        <a href="https://www.twilio.com/docs/api/notifications" target="_blank">
+            Read the Twilio Notify guide<i class="fa fa-fw fa-external-link"></i>
+        </a>
+        <a class="btn btn-lg btn-success" asp-controller="Home" asp-action="Index">Back</a>
+    </header>
+
+<section>
+    <h1>Send Notification to Identity</h1>
+
+    <input type="text" id="identityInput" placeholder="Identity" size="30" />
+    <p />
+    <input type="submit" id="sendNotificationButton" value="Send Notification" />
+
+    <div id="message">Welcome to Notify!</div>
+
+    <p>After you set up a notification binding, go ahead and send a notification to that identity!</p>
+</section>
+@section Scripts {
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="~/js/notify.js"></script>
+}

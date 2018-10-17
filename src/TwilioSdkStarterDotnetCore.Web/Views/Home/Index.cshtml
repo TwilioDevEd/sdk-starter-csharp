@@ -1,0 +1,64 @@
+﻿@using TwilioSdkStarterDotnetCore.Web.Models
+@model TwilioSdkStarterDotnetCore.Web.Models.TwilioAccount
+@{
+    ViewData["Title"] = "Twilio Sdk Starter Kit";
+}
+
+@section Styles{
+    <link rel="stylesheet" crossorigin="anonymous"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u">
+    <link href="~/css/home.css" rel="stylesheet" />
+}
+<h1>Twilio Server Starter Kit Environment Setup</h1>
+<h2>Account Information</h2>
+<table class="table table-striped">
+    <tr>
+        <td class="config-key">TWILIO_ACCOUNT_SID</td>
+        <td class="config-value" id="twilioAccountSid">@Model.AccountSid</td>
+    </tr>
+    <tr>
+        <td class="config-key">TWILIO_API_KEY</td>
+        <td class="config-value" id="twilioApiKey">@Model.ApiKey</td>
+    </tr>
+    <tr>
+        <td class="config-key">TWILIO_API_SECRET</td>
+        <td class="config-value" id="twilioApiSecret">@Model.ApiSecret</td>
+    </tr>
+</table>
+<h2>Products</h2>
+<table class="table table-striped">
+    <tr>
+        <td class="config-product">Notify</td>
+        <td class="config-key">TWILIO_NOTIFICATION_SERVICE_SID</td>
+        <td class="config-value" id="twilioNotificationServiceSid">@Model.NotificationServiceSid</td>
+    </tr>
+    <tr>
+        <td class="config-product">Chat</td>
+        <td class="config-key">TWILIO_CHAT_SERVICE_SID</td>
+        <td class="config-value" id="twilioChatServiceSid">@Model.ChatServiceSid</td>
+    </tr>
+    <tr>
+        <td class="config-product">Sync</td>
+        <td class="config-key">TWILIO_SYNC_SERVICE_SID</td>
+        <td class="config-value" id="twilioSyncServiceSid">@Model.SyncServiceSid</td>
+    </tr>
+</table>
+<h1>Demos</h1>
+
+<a class="btn btn-lg btn-success" id="videoDemoButton" asp-controller="Video" asp-action="Index">Video</a>
+<a class="btn btn-lg btn-warning" id="syncDemoButton" asp-controller="Sync" asp-action="Index">Sync</a>
+<a class="btn btn-lg btn-danger" id="notifyDemoButton"asp-controller="Notify" asp-action="Index">Notify</a>
+<a class="btn btn-lg btn-info" id="chatDemoButton" asp-controller="Chat" asp-action="Index">Chat</a>
+
+
+
+@section Scripts{
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script crossorigin="anonymous"
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"></script>
+    //
+    <script src="~/js/config-check.js"></script>
+}
+
