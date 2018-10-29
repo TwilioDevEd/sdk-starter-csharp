@@ -16,19 +16,19 @@
 <h2>Account Information</h2>
 <table class="table table-striped">
     <tr>
-        <td class="config-key">TWILIO_ACCOUNT_SID</td>
+        <td class="config-key">AccountSid</td>
         <td class="config-value @(string.IsNullOrEmpty(Model.AccountSid) ? "unset" : "set")" id="twilioAccountSid">
             @(string.IsNullOrEmpty(Model.AccountSid) ? ViewData["NotConfiguredMessage"] : Model.AccountSid)
         </td>
     </tr>
     <tr>
-        <td class="config-key">TWILIO_API_KEY</td>
+        <td class="config-key">ApiKey</td>
         <td class="config-value @(string.IsNullOrEmpty(Model.ApiKey) ? "unset" : "set")" id="twilioApiKey">
             @(string.IsNullOrEmpty(Model.ApiKey) ? ViewData["NotConfiguredMessage"] : Model.ApiKey)
         </td>
     </tr>
     <tr>
-        <td class="config-key">TWILIO_API_SECRET</td>
+        <td class="config-key">ApiSecret</td>
         <td class="config-value @(string.IsNullOrEmpty(Model.ApiSecret) ? "unset" : "set")" id="twilioApiSecret">
             @(string.IsNullOrEmpty(Model.ApiSecret) ? ViewData["NotConfiguredMessage"] : "[found in config - not displayed]")
         </td>
@@ -38,21 +38,21 @@
 <table class="table table-striped">
     <tr>
         <td class="config-product">Notify</td>
-        <td class="config-key">TWILIO_NOTIFICATION_SERVICE_SID</td>
+        <td class="config-key">NotificationServiceSid</td>
         <td class="config-value @(string.IsNullOrEmpty(Model.NotificationServiceSid) ? "unset" : "set")" id="twilioNotificationServiceSid">
             @(string.IsNullOrEmpty(Model.NotificationServiceSid) ? ViewData["NotConfiguredMessage"] : Model.NotificationServiceSid)
         </td>
     </tr>
     <tr>
         <td class="config-product">Chat</td>
-        <td class="config-key">TWILIO_CHAT_SERVICE_SID</td>
+        <td class="config-key">ChatServiceSid</td>
         <td class="config-value @(string.IsNullOrEmpty(Model.ChatServiceSid) ? "unset" : "set")" id="twilioChatServiceSid">
             @(string.IsNullOrEmpty(Model.ChatServiceSid) ? ViewData["NotConfiguredMessage"] : Model.ChatServiceSid)
         </td>
     </tr>
     <tr>
         <td class="config-product">Sync</td>
-        <td class="config-key">TWILIO_SYNC_SERVICE_SID</td>
+        <td class="config-key">SyncServiceSid</td>
         <td class="config-value set" id="twilioSyncServiceSid">
             @(string.IsNullOrEmpty(Model.SyncServiceSid) ? "default" : Model.SyncServiceSid)
         </td>
