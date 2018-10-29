@@ -4,7 +4,7 @@
 
 # Twilio SDK Starter Application for C#
 
-[![Build Status](https://travis-ci.org/TwilioDevEd/sdk-starter-csharp.svg?branch=master)](https://travis-ci.org/TwilioDevEd/sdk-starter-csharp)
+[![Build Status](https://travis-ci.org/TwilioDevEd/sdk-starter-dotnet-core.svg?branch=master)](https://travis-ci.org/TwilioDevEd/sdk-starter-dotnet-core)
 
 ## .NET Core 2.1.x Project
 

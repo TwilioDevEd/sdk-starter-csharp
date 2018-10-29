@@ -53,8 +53,8 @@
     <tr>
         <td class="config-product">Sync</td>
         <td class="config-key">TWILIO_SYNC_SERVICE_SID</td>
-        <td class="config-value @(string.IsNullOrEmpty(Model.SyncServiceSid) ? "unset" : "set")" id="twilioSyncServiceSid">
-            @(string.IsNullOrEmpty(Model.SyncServiceSid) ? ViewData["NotConfiguredMessage"] : Model.SyncServiceSid)
+        <td class="config-value set" id="twilioSyncServiceSid">
+            @(string.IsNullOrEmpty(Model.SyncServiceSid) ? "default" : Model.SyncServiceSid)
         </td>
     </tr>
 </table>
