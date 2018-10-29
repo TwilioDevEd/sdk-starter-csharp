@@ -2,6 +2,7 @@
 @model TwilioSdkStarterDotnetCore.Web.Models.TwilioAccount
 @{
     ViewData["Title"] = "Twilio Sdk Starter Kit";
+    ViewData["NotConfiguredMessage"] = "Not configured in appsettings.json or secrets.json";
 }
 
 @section Styles{
@@ -11,19 +12,26 @@
     <link href="~/css/home.css" rel="stylesheet" />
 }
 <h1>Twilio Server Starter Kit Environment Setup</h1>
+<p class="alert alert-danger">Never publicly show your credentials. This is purely to confirm correct setup.</p>
 <h2>Account Information</h2>
 <table class="table table-striped">
     <tr>
         <td class="config-key">TWILIO_ACCOUNT_SID</td>
-        <td class="config-value" id="twilioAccountSid">@Model.AccountSid</td>
+        <td class="config-value @(string.IsNullOrEmpty(Model.AccountSid) ? "unset" : "set")" id="twilioAccountSid">
+            @(string.IsNullOrEmpty(Model.AccountSid) ? ViewData["NotConfiguredMessage"] : Model.AccountSid)
+        </td>
     </tr>
     <tr>
         <td class="config-key">TWILIO_API_KEY</td>
-        <td class="config-value" id="twilioApiKey">@Model.ApiKey</td>
+        <td class="config-value @(string.IsNullOrEmpty(Model.ApiKey) ? "unset" : "set")" id="twilioApiKey">
+            @(string.IsNullOrEmpty(Model.ApiKey) ? ViewData["NotConfiguredMessage"] : Model.ApiKey)
+        </td>
     </tr>
     <tr>
         <td class="config-key">TWILIO_API_SECRET</td>
-        <td class="config-value" id="twilioApiSecret">@Model.ApiSecret</td>
+        <td class="config-value @(string.IsNullOrEmpty(Model.ApiSecret) ? "unset" : "set")" id="twilioApiSecret">
+            @(string.IsNullOrEmpty(Model.ApiSecret) ? ViewData["NotConfiguredMessage"] : "[found in config - not displayed]")
+        </td>
     </tr>
 </table>
 <h2>Products</h2>
@@ -31,17 +39,23 @@
     <tr>
         <td class="config-product">Notify</td>
         <td class="config-key">TWILIO_NOTIFICATION_SERVICE_SID</td>
-        <td class="config-value" id="twilioNotificationServiceSid">@Model.NotificationServiceSid</td>
+        <td class="config-value @(string.IsNullOrEmpty(Model.NotificationServiceSid) ? "unset" : "set")" id="twilioNotificationServiceSid">
+            @(string.IsNullOrEmpty(Model.NotificationServiceSid) ? ViewData["NotConfiguredMessage"] : Model.NotificationServiceSid)
+        </td>
     </tr>
     <tr>
         <td class="config-product">Chat</td>
         <td class="config-key">TWILIO_CHAT_SERVICE_SID</td>
-        <td class="config-value" id="twilioChatServiceSid">@Model.ChatServiceSid</td>
+        <td class="config-value @(string.IsNullOrEmpty(Model.ChatServiceSid) ? "unset" : "set")" id="twilioChatServiceSid">
+            @(string.IsNullOrEmpty(Model.ChatServiceSid) ? ViewData["NotConfiguredMessage"] : Model.ChatServiceSid)
+        </td>
     </tr>
     <tr>
         <td class="config-product">Sync</td>
         <td class="config-key">TWILIO_SYNC_SERVICE_SID</td>
-        <td class="config-value" id="twilioSyncServiceSid">@Model.SyncServiceSid</td>
+        <td class="config-value @(string.IsNullOrEmpty(Model.SyncServiceSid) ? "unset" : "set")" id="twilioSyncServiceSid">
+            @(string.IsNullOrEmpty(Model.SyncServiceSid) ? ViewData["NotConfiguredMessage"] : Model.SyncServiceSid)
+        </td>
     </tr>
 </table>
 <h1>Demos</h1>
@@ -59,6 +73,5 @@
             src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"></script>
     //
-    <script src="~/js/config-check.js"></script>
 }
 
