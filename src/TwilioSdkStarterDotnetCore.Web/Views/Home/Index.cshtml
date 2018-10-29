@@ -30,7 +30,7 @@
     <tr>
         <td class="config-key">ApiSecret</td>
         <td class="config-value @(string.IsNullOrEmpty(Model.ApiSecret) ? "unset" : "set")" id="twilioApiSecret">
-            @(string.IsNullOrEmpty(Model.ApiSecret) ? ViewData["NotConfiguredMessage"] : "[found in config - not displayed]")
+            @(string.IsNullOrEmpty(Model.ApiSecret) ? ViewData["NotConfiguredMessage"] : "Configured properly")
         </td>
     </tr>
 </table>
