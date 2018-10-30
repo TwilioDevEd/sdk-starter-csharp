@@ -4,7 +4,7 @@
 
 # Twilio SDK Starter Application for C#
 
-[![Build Status](https://travis-ci.org/TwilioDevEd/sdk-starter-csharp.svg?branch=master)](https://travis-ci.org/TwilioDevEd/sdk-starter-csharp)
+[![Build Status](https://travis-ci.org/TwilioDevEd/sdk-starter-dotnet-core.svg?branch=master)](https://travis-ci.org/TwilioDevEd/sdk-starter-dotnet-core)
 
 ## .NET Core 2.1.x Project
 
@@ -18,7 +18,10 @@ Let's get started!
 ## Setup
 
 1. Install [.NET Core](https://www.microsoft.com/net/core).
-2. Clone this repository: `git clone https://github.com/TwilioDevEd/sdk-starter-dotnet-core.git`
+2. Clone this repository:
+    ```bash
+    git clone https://github.com/TwilioDevEd/sdk-starter-dotnet-core.git
+    ```
 
 ## Configure the sample application
 
@@ -32,31 +35,44 @@ Every sample in the demo requires some basic credentials from your Twilio accoun
 
 | Config Value       | Description                                                                                                           |
 | :----------------- | :-------------------------------------------------------------------------------------------------------------------- |
-| `TwilioAccountSid` | Your primary Twilio account identifier - find this [in the console here](https://www.twilio.com/console).             |
-| `TwilioApiKey`     | Used to authenticate - [generate one here](https://www.twilio.com/console/dev-tools/api-keys).                        |
-| `TwilioApiSecret`  | Used to authenticate - [just like the above, you'll get one here](https://www.twilio.com/console/dev-tools/api-keys). |
+| `TwilioAccount:AccountSid` | Your primary Twilio account identifier - find this [in the console here](https://www.twilio.com/console).             |
+| `TwilioAccount:ApiKey`     | Used to authenticate - [generate one here](https://www.twilio.com/console/dev-tools/api-keys).                        |
+| `TwilioAccount:ApiSecret`  | Used to authenticate - [just like the above, you'll get one here](https://www.twilio.com/console/dev-tools/api-keys). |
+
+To set a configuration value, use the `dotnet` command line:
+
+```bash
+cd sdk-starter-dotnet-core/src/TwilioSdkStarterDotnetCore.Web
+dotnet user-secrets set "TwilioAccount:AccountSid" "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+dotnet user-secrets set "TwilioAccount:ApiKey" "SKXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+dotnet user-secrets set "TwilioAccount:ApiSecret" "xxxxxxxxxxxxxxxxxxxxxxxx"
+```
 
 #### A Note on API Keys
 
 When you generate an API key pair at the URLs above, your API Secret will only be shown once -
 make sure to save this information in a secure location.
 
-### Configure product-specific settings
+## Configure product-specific settings
 
-Depending on which demos you'd like to run, you may need to configure a few more values in your
-`appsettings.json` file.
+Depending on which demos you'd like to run, you may need to configure a few more values.
 
 ### Configuring Twilio Sync
 
-Twilio Sync works out of the box, using default settings per account. Once you have your API keys configured and your Java application built and running, [open a browser](http://localhost:3000/sync)!
+Twilio Sync works out of the box, using default settings per account.
 
 ### Configuring Twilio Chat
 
-In addition to the above, you'll need to [generate a Chat Service](https://www.twilio.com/console/chat/services) in the Twilio Console. Put the result in your `appsettings.json` file.
+In addition to the above, you'll need to [generate a Chat Service](https://www.twilio.com/console/chat/services) in the Twilio Console. Put the result in your secrets.
 
 | Config Value           | Where to get one.                                                                       |
 | :--------------------- | :-------------------------------------------------------------------------------------- |
-| `TwilioChatServiceSid` | [Generate one in the Twilio Chat console](https://www.twilio.com/console/chat/services) |
+| `TwilioAccount:ChatServiceSid` | [Generate one in the Twilio Chat console](https://www.twilio.com/console/chat/services) |
+
+```bash
+cd sdk-starter-dotnet-core/src/TwilioSdkStarterDotnetCore.Web
+dotnet user-secrets set "TwilioAccount:ChatServiceSid" "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+```
 
 ### Configuring Twilio Notify
 
@@ -64,10 +80,13 @@ You will need to create a Notify Service and add at least one credential on the 
 
 | Config Value                   | Where to get one.                                                                                                                  |
 | :----------------------------- | :--------------------------------------------------------------------------------------------------------------------------------- |
-| `TwilioNotificationServiceSid` | Generate one in the [Notify Console](https://www.twilio.com/console/notify/services) and put this in your `appsettings.json` file. |
+| `TwilioAccoubnt:NotificationServiceSid` | Generate one in the [Notify Console](https://www.twilio.com/console/notify/services). |
 | A Push Credential              | Generate one with Apple or Google and [configure it as a Notify credential](https://www.twilio.com/console/notify/credentials).    |
 
-Once you've done that, run the application and [open a browser](localhost:50768/notify)!
+```bash
+cd sdk-starter-dotnet-core/src/TwilioSdkStarterDotnetCore.Web
+dotnet user-secrets set "TwilioAccount:ChatServiceSid" "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+```
 
 ## Run The Application
 
@@ -78,8 +97,9 @@ Open `TwilioSdkStarterDotnetCore.sln` and press _F5_ or click the Run button
 ### Windows CLI, OS X or Linux
 
 ```bash
+cd sdk-starter-dotnet-core/src/TwilioSdkStarterDotnetCore.Web
 dotnet restore
-dotnet run --project src/TwilioSdkStarterDotnetCore.Web
+dotnet run
 ```
 
 Your application should now be running at [http://localhost:50768/](http://localhost:50768/).

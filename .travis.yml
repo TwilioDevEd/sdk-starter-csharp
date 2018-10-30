@@ -8,4 +8,4 @@ services:
   - docker
 
 script:
-  - docker build . -f Dockerfile-test --no-cache
+  - docker build . --no-cache
