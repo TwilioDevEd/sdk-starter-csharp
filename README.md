@@ -80,7 +80,7 @@ You will need to create a Notify Service and add at least one credential on the 
 
 | Config Value                   | Where to get one.                                                                                                                  |
 | :----------------------------- | :--------------------------------------------------------------------------------------------------------------------------------- |
-| `TwilioAccoubnt:NotificationServiceSid` | Generate one in the [Notify Console](https://www.twilio.com/console/notify/services). |
+| `TwilioAccount:NotificationServiceSid` | Generate one in the [Notify Console](https://www.twilio.com/console/notify/services). |
 | A Push Credential              | Generate one with Apple or Google and [configure it as a Notify credential](https://www.twilio.com/console/notify/credentials).    |
 
 ```bash
