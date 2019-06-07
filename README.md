@@ -85,7 +85,7 @@ You will need to create a Notify Service and add at least one credential on the 
 
 ```bash
 cd sdk-starter-dotnet-core/src/TwilioSdkStarterDotnetCore.Web
-dotnet user-secrets set "TwilioAccount:ChatServiceSid" "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+dotnet user-secrets set "TwilioAccount:NotificationServiceSid" "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 ```
 
 ## Run The Application
