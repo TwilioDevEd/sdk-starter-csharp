@@ -15,6 +15,8 @@ to see which demos you can run. You'll find examples for [Chat](https://www.twil
 
 Let's get started!
 
+NOTE: This project requires Visual Studio 2019.
+
 ## Setup
 
 1. Install [.NET Core](https://www.microsoft.com/net/core).
