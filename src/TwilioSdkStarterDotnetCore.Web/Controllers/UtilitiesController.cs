@@ -46,6 +46,17 @@ namespace TwilioSdkStarterDotnetCore.Web.Controllers
             // This can be tracked internally by your web app.
             var identity = randomUserId();
 
+            return CreateTokenResult(identity);
+        }
+
+        [HttpGet("/token/{identity:alpha}")]
+        public JsonResult TokenForIdentity(string identity)
+        {
+            return CreateTokenResult(identity);
+        }
+
+        private JsonResult CreateTokenResult(string identity) 
+        {
 
             var grants = new HashSet<IGrant>();
 
