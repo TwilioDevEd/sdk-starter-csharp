@@ -9,7 +9,7 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
-    <PackageReference Include="Twilio" Version="5.19.0" />
+    <PackageReference Include="Twilio" Version="5.44.0" />
   </ItemGroup>
 
   <ItemGroup>
