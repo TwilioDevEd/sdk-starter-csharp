@@ -1,4 +1,4 @@
-FROM microsoft/dotnet/core/sdk/3.1
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1
 WORKDIR /project
 COPY TwilioSdkStarterDotnetCore.sln /project/
 COPY src /project/src
