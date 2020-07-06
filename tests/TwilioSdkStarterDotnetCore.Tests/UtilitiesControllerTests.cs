@@ -40,7 +40,7 @@ namespace TwilioSdkStarterDotnetCore.Tests
     {
       Assert.That(
           () => new UtilitiesController(null),
-          Throws.ArgumentNullException.With.Message.Contains("Parameter name: twilioAccount"));
+          Throws.ArgumentNullException.With.Message.Contains("Parameter 'twilioAccount'"));
     }
 
     [Test]

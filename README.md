@@ -6,7 +6,7 @@
 
 [![Build Status](https://travis-ci.org/TwilioDevEd/sdk-starter-csharp.svg?branch=master)](https://travis-ci.org/TwilioDevEd/sdk-starter-csharp)
 
-## .NET Core 2.1.x Project
+## .NET Core 3.1 Project
 
 This sample project demonstrates how to use Twilio APIs in a C# web
 application. Once the app is up and running, check out [the home page](http://localhost:3000)
@@ -15,7 +15,7 @@ to see which demos you can run. You'll find examples for [Chat](https://www.twil
 
 Let's get started!
 
-NOTE: This project requires Visual Studio 2019.
+NOTE: This project requires Visual Studio 2019, or .NET Core 3.1 installed on your computer.
 
 ## Setup
 

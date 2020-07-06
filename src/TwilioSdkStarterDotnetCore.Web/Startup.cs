@@ -22,7 +22,7 @@ namespace TwilioSdkStarterDotnetCore.Web
             // this will extract our Twilio account details from the appsettings.json and map them to an object
             services.Configure<TwilioAccount>(Configuration.GetSection("TwilioAccount"));
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,11 +42,11 @@ namespace TwilioSdkStarterDotnetCore.Web
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            app.UseMvc(routes =>
+            app.UseRouting();
+
+            app.UseEndpoints(endpoints =>
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }
