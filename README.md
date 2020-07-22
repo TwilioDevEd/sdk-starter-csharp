@@ -22,7 +22,7 @@ NOTE: This project requires Visual Studio 2019, or .NET Core 3.1 installed on yo
 1. Install [.NET Core](https://www.microsoft.com/net/core).
 2. Clone this repository:
     ```bash
-    git clone https://github.com/TwilioDevEd/sdk-starter-dotnet-core.git
+    git clone https://github.com/TwilioDevEd/sdk-starter-csharp.git
     ```
 
 ## Configure the sample application
@@ -72,7 +72,7 @@ In addition to the above, you'll need to [generate a Chat Service](https://www.t
 | `TwilioAccount:ChatServiceSid` | [Generate one in the Twilio Chat console](https://www.twilio.com/console/chat/services) |
 
 ```bash
-cd sdk-starter-dotnet-core/src/TwilioSdkStarterDotnetCore.Web
+cd sdk-starter-csharp/src/TwilioSdkStarterDotnetCore.Web
 dotnet user-secrets set "TwilioAccount:ChatServiceSid" "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 ```
 
@@ -86,7 +86,7 @@ You will need to create a Notify Service and add at least one credential on the 
 | A Push Credential              | Generate one with Apple or Google and [configure it as a Notify credential](https://www.twilio.com/console/notify/credentials).    |
 
 ```bash
-cd sdk-starter-dotnet-core/src/TwilioSdkStarterDotnetCore.Web
+cd sdk-starter-csharp/src/TwilioSdkStarterDotnetCore.Web
 dotnet user-secrets set "TwilioAccount:NotificationServiceSid" "ISXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 ```
 
@@ -99,7 +99,7 @@ Open `TwilioSdkStarterDotnetCore.sln` and press _F5_ or click the Run button
 ### Windows CLI, OS X or Linux
 
 ```bash
-cd sdk-starter-dotnet-core/src/TwilioSdkStarterDotnetCore.Web
+cd sdk-starter-csharp/src/TwilioSdkStarterDotnetCore.Web
 dotnet restore
 dotnet run
 ```
